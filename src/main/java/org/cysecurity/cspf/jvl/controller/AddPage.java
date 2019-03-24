@@ -57,7 +57,6 @@ public class AddPage extends HttpServlet {
                 else
                 {
                     out.print("Failed to create the file");
-                    System.out.println("test");
                 }
            }
            else
