@@ -55,28 +55,33 @@
   <artifactId>maven-project-info-reports-plugin</artifactId>
   <version>3.0.0</version>
 </plugin>
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>findbugs-maven-plugin</artifactId>
-            <version>3.0.5</version>
-            <configuration>
-                <effort>Max</effort>
-                <failOnError>false</failOnError>
-                <threshold>Low</threshold>
-                 <xmlOutput>true</xmlOutput>
+<plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.6.0.1398</version>
+      </plugin>
+<!--         <plugin> -->
+<!--             <groupId>org.codehaus.mojo</groupId> -->
+<!--             <artifactId>findbugs-maven-plugin</artifactId> -->
+<!--             <version>3.0.5</version> -->
+<!--             <configuration> -->
+<!--                 <effort>Max</effort> -->
+<!--                 <failOnError>false</failOnError> -->
+<!--                 <threshold>Low</threshold> -->
+<!--                  <xmlOutput>true</xmlOutput> -->
 
-                <findbugsXmlOutputDirectory>${project.build.directory}/findbugs</findbugsXmlOutputDirectory>
-            </configuration>
-            <executions>
-                <execution>
-                    <id>analyze-compile</id>
-                    <phase>compile</phase>
-                    <goals>
-                        <goal>check</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
+<!--                 <findbugsXmlOutputDirectory>${project.build.directory}/findbugs</findbugsXmlOutputDirectory> -->
+<!--             </configuration> -->
+<!--             <executions> -->
+<!--                 <execution> -->
+<!--                     <id>analyze-compile</id> -->
+<!--                     <phase>compile</phase> -->
+<!--                     <goals> -->
+<!--                         <goal>check</goal> -->
+<!--                     </goals> -->
+<!--                 </execution> -->
+<!--             </executions> -->
+<!--         </plugin> -->
       </plugins>
     </pluginManagement>
   </build>
